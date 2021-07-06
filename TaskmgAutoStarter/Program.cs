@@ -13,7 +13,7 @@ namespace TaskmgAutoStarter
             {
                 Process manager= Process.Start("taskmgr.exe");
                 Console.WriteLine("Started");
-                while (manager.MainWindowHandle.ToInt32() == 0) Thread.Sleep(10);
+                while (manager.MainWindowHandle.ToInt32() == 0) Thread.Sleep(50);
                 ShowWindow(manager.MainWindowHandle, 6);
                 manager.WaitForExit();
             }
